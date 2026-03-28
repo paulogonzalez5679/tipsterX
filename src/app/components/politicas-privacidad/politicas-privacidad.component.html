@@ -1,0 +1,120 @@
+<main class="privacy-page">
+  <header class="privacy-header" [class.menu-open]="isMenuOpen()">
+    <div class="header-left">
+      <img src="/images/logos/Recurso 6.svg" alt="TipsterX" class="header-logo">
+      <span class="divider">|</span>
+      <a routerLink="/" fragment="analisis-deportivo" class="header-tagline" (click)="closeMenu()">ANÁLISIS DEPORTIVO</a>
+    </div>
+
+    <button class="privacy-hamburger" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()" aria-label="Abrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <nav class="header-nav" [class.active]="isMenuOpen()">
+      <a class="mobile-only" routerLink="/" fragment="analisis-deportivo" (click)="closeMenu()">ANÁLISIS DEPORTIVO</a>
+      <a routerLink="/" fragment="inicio" (click)="closeMenu()">HOME</a>
+      <a routerLink="/" fragment="contacto" (click)="closeMenu()">CONTACTO</a>
+      <button type="button" class="header-cta">
+        <img src="/images/buttons/btnPronostico.svg" alt="PRONÓSTICOS">
+        <span>PRONÓSTICOS</span>
+      </button>
+    </nav>
+  </header>
+
+  @if (isMenuOpen()) {
+    <div class="privacy-menu-overlay" (click)="closeMenu()"></div>
+  }
+
+  <section class="privacy-content">
+    <img src="/images/logos/Recurso 6.svg" alt="TipsterX" class="center-logo">
+
+    <div class="privacy-title">
+      <img src="/images/hero/politicatxt.svg" alt="Política de Privacidad" class="privacy-title-image">
+    </div>
+
+    <article class="policy-text">
+      <div class="policy-subtitle">
+        <img src="/images/hero/descripcionPtxt.webp" alt="Descripción Política de Privacidad" class="policy-subtitle-image">
+      </div>
+      <p>
+        En TipsterX operamos como una plataforma digital de análisis deportivo bajo un modelo SaaS (Software as a Service).
+        La protección de los datos personales de nuestros usuarios es una prioridad fundamental. Esta Política de Privacidad
+        explica cómo recopilamos, utilizamos y protegemos la información dentro de nuestra plataforma.
+      </p>
+
+      <h3>1. Información que recopilamos</h3>
+      <p>
+        TipsterX puede recopilar información personal básica proporcionada voluntariamente por el usuario, como:
+      </p>
+      <ul>
+        <li>Nombre</li>
+        <li>Dirección de correo electrónico</li>
+        <li>Información de contacto</li>
+        <li>Datos relacionados con la suscripción</li>
+      </ul>
+      <p>No recopilamos ni almacenamos información financiera sensible.</p>
+
+      <h3>2. Procesamiento de pagos</h3>
+      <p>
+        Los pagos realizados en TipsterX se gestionan exclusivamente a través de proveedores de pago externos certificados,
+        incluyendo PayPhone, Datafast y ePay, quienes operan bajo sus propios estándares de seguridad y cumplimiento normativo.
+      </p>
+      <p>
+        TipsterX no almacena, procesa ni tiene acceso a datos de tarjetas de crédito, débito o información bancaria.
+      </p>
+
+      <h3>3. Uso de la información</h3>
+      <p>La información recopilada se utiliza únicamente para:</p>
+      <ul>
+        <li>Proveer acceso a los servicios contratados.</li>
+        <li>Gestionar suscripciones y cuentas de usuario.</li>
+        <li>Enviar comunicaciones operativas o informativas relacionadas con el servicio.</li>
+        <li>Mejorar la funcionalidad, seguridad y rendimiento de la plataforma.</li>
+      </ul>
+
+      <h3>4. Confidencialidad y tratamiento de datos</h3>
+      <p>
+        Toda la información de los usuarios es tratada de manera confidencial. TipsterX no vende, alquila ni comparte datos
+        personales con terceros, salvo en los siguientes casos:
+      </p>
+      <ul>
+        <li>Cuando sea necesario para la correcta prestación del servicio.</li>
+        <li>Cuando exista una obligación legal o requerimiento de autoridad competente.</li>
+      </ul>
+
+      <h3>5. Seguridad de la información</h3>
+      <p>
+        Implementamos medidas técnicas y organizativas razonables para proteger los datos personales frente a accesos no
+        autorizados, alteraciones, pérdidas o usos indebidos, conforme a prácticas habituales en plataformas SaaS internacionales.
+      </p>
+
+      <h3>6. Derechos del usuario</h3>
+      <p>Los usuarios pueden solicitar en cualquier momento:</p>
+      <ul>
+        <li>Acceso a su información personal.</li>
+        <li>Corrección o actualización de datos.</li>
+        <li>Eliminación de su información, salvo cuando exista obligación legal de conservación.</li>
+      </ul>
+      <p>Las solicitudes pueden realizarse a través de nuestros canales oficiales de contacto.</p>
+
+      <h3>7. Retención de datos</h3>
+      <p>
+        La información personal se conserva únicamente durante el tiempo necesario para cumplir con los fines descritos en
+        esta política o mientras exista una relación activa con el usuario.
+      </p>
+
+      <h3>8. Modificaciones</h3>
+      <p>
+        TipsterX se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Las actualizaciones serán
+        publicadas en esta sección y entrarán en vigencia desde su publicación.
+      </p>
+    </article>
+  </section>
+
+  <footer class="privacy-footer">
+    <p>©2026 TipsterX. All rights reserved.</p>
+    <img src="/images/icons/X.svg" alt="X TipsterX" class="footer-x">
+  </footer>
+</main>

@@ -1,0 +1,299 @@
+.partners-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem 0;
+  gap: 2.5rem;
+}
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.plans {
+  padding: 6rem 2rem;
+  background: url('/images/hero/fondoplans.webp') no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+.plans-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.plans-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 2px;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.title-x {
+  color: #DC0A0A;
+}
+
+.plans-badge {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plans-badge span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+
+.plans-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1.3fr;
+  gap: -0.3rem;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: visible;
+}
+
+.plan-card:hover .plan-image-wrapper {
+  transform: translateY(-8px);
+}
+
+.plan-card.featured:hover .plan-image-wrapper {
+  transform: translateY(-8px);
+}
+
+.plan-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  overflow: visible;
+  z-index: 1;
+}
+
+.plan-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.plan-btn-overlay {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover  */
+.plan-btn-overlay:hover {
+  transform: translate(-50%, -53%);
+}
+.plan-btn-overlay img {
+  width: 280px;
+  max-width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.btn-free {
+  top: 45%;
+}
+
+.btn-pro {
+  top: 40%;
+}
+
+.x-logo-large {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin-right: -10rem;
+}
+
+@media (max-width: 1024px) {
+  .plans {
+    padding: 4rem 1.5rem;
+  }
+  
+  .plans-container {
+    max-width: 750px;
+  }
+  
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  
+  .plans-badge {
+    padding: 0.5rem 1.25rem;
+  }
+  
+  .plans-badge span {
+    font-size: 0.75rem;
+  }
+  
+  .plan-btn-overlay img {
+    width: 240px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plans {
+    padding: 3rem 1rem;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .plans-title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .plans-badge {
+    padding: 0.5rem 1rem;
+  }
+  
+  .plans-badge span {
+    font-size: 0.7rem;
+  }
+  
+  .plans-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .plan-content { 
+    width: 90%; 
+    transform: translate(-50%, -45%); 
+  }
+  
+  .plan-cta img { 
+    max-width: 140px; 
+  }
+  
+  .plan-btn-overlay img {
+    width: 260px;
+    height: 80px;
+  }
+  
+  .partners-row {
+    padding: 1.5rem 0.5rem 0;
+  }
+  
+  .x-logo-large {
+    margin-right: 0;
+    margin-left: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans {
+    padding: 2.5rem 0.75rem;
+    background-attachment: scroll;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .plans-title {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .plans-badge {
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .plans-badge span {
+    font-size: 0.65rem;
+  }
+  
+  .plans-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .plans-grid {
+    max-width: 320px;
+    gap: 1rem;
+  }
+  
+  .plan-btn-overlay img {
+    width: 220px;
+    height: 65px;
+  }
+  
+  .btn-free {
+    top: 48%;
+  }
+  
+  .btn-pro {
+    top: 43%;
+  }
+  
+  .partners-row {
+    padding: 1rem 0.25rem 0;
+    gap: 1.5rem;
+  }
+  
+  .x-logo-large {
+    width: 50px;
+    height: 50px;
+  }
+}

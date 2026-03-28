@@ -1,0 +1,242 @@
+.about {
+  background: #000;
+}
+
+.about-banner {
+  background: url('/images/hero/Recurso%201.webp') center/cover no-repeat;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+.about-banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.logo-large {
+  display: inline-flex;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.logo-large img {
+  height: 80px;
+  width: auto;
+}
+
+.logo-large .logo-text {
+  color: #fff;
+}
+
+.logo-large .logo-x {
+  color: #DC0A0A;
+  font-size: 4rem;
+}
+
+.about-content-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2.3fr;
+  gap: 0;
+  align-items: stretch;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid #DC0A0A;
+}
+
+.about-separator {
+  width: 100vw;
+  margin-top: 6rem;
+  margin-left: calc(50% - 50vw);
+}
+
+.about-separator img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+
+.about-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem 1.5rem 0;
+  border-right: 1px solid #DC0A0A;
+}
+
+.about-right {
+  padding: 1.5rem 0 1.5rem 2.5rem;
+}
+
+.about-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  position: relative;
+  padding-left: 0;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.about-title::before {
+  display: none;
+}
+
+.about-right p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 4rem 2rem;
+  }
+  
+  .about-header {
+    margin-bottom: 3rem;
+  }
+  
+  .logo-large img {
+    height: 60px;
+  }
+  
+  .about-content-grid {
+    grid-template-columns: minmax(180px, 1fr) 1.7fr;
+  }
+
+  .about-left {
+    padding-right: 1.75rem;
+  }
+
+  .about-right {
+    padding-left: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-banner {
+    padding: 0.5rem 1rem;
+  }
+  
+  .about-container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .about-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .logo-large img {
+    height: 50px;
+  }
+  
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-separator {
+    margin-top: 3.5rem;
+  }
+
+  .about-left {
+    border-right: 0;
+    padding: 0;
+  }
+
+  .about-right {
+    padding: 0;
+  }
+  
+  .about-title {
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .about-title::before {
+    display: none;
+  }
+  
+  .about-right {
+    text-align: center;
+  }
+  
+  .about-right p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-banner {
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .about-container {
+    padding: 2.5rem 1rem;
+  }
+  
+  .about-header {
+    margin-bottom: 2rem;
+  }
+  
+  .logo-large img {
+    height: 40px;
+  }
+  
+  .about-content-grid {
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .about-separator {
+    margin-top: 3rem;
+  }
+
+  .about-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    letter-spacing: 1px;
+  }
+  
+  .about-right p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-highlights {
+    flex-wrap: wrap;
+  }
+}

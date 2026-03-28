@@ -1,0 +1,584 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('/images/hero/fondo1.webp') center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Franjas diagonales decorativas */
+.diagonal-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.stripe {
+  position: absolute;
+  width: 150%;
+  height: 200px;
+  background: linear-gradient(to right, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.06) 30%, 
+    rgba(255,255,255,0.12) 50%, 
+    rgba(255,255,255,0.06) 70%, 
+    rgba(255,255,255,0) 100%);
+  transform: rotate(-20deg) skewY(-2deg);
+}
+
+.stripe-1 {
+  top: 5%;
+  left: -20%;
+  width: 140%;
+  height: 120px;
+}
+
+.stripe-2 {
+  top: 35%;
+  left: -30%;
+  width: 160%;
+  height: 180px;
+  opacity: 0.7;
+}
+
+.stripe-3 {
+  top: 65%;
+  left: -15%;
+  width: 130%;
+  height: 150px;
+  opacity: 0.5;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  padding-top: 120px;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-content {
+  padding-right: 2rem;
+}
+
+.hero-title {
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-title .line1,
+.hero-title .line2 {
+  display: block;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.95;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.hero-title .line2 {
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 2.5rem 0;
+  max-width: 480px;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary img {
+  display: block;
+  height: 45px;
+  width: auto;
+}
+
+.btn-primary .cta-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1ebeb;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary img {
+  display: block;
+  height: 45px;
+  width: auto;
+}
+
+.btn-secondary .cta-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: 'Aspekta', sans-serif;
+}
+
+.btn-secondary strong {
+  font-weight: 800;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #fff;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-link img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.players-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  object-position: bottom;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.hero-bottom-stats {
+  position: absolute;
+  bottom: 80px;
+  right: 4rem;
+  display: flex;
+  gap: 3rem;
+  z-index: 10;
+}
+
+.bottom-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.stat-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.stat-value {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 40px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dot.active {
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    order: 1;
+  }
+  
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    order: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-bottom-stats {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .bottom-stat {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-title {
+    font-size: 0.65rem;
+  }
+
+  .stat-value {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    padding-top: 80px;
+  }
+  
+  .hero-container {
+    padding: 1.5rem;
+  }
+  
+  .hero-title .line1,
+  .hero-title .line2 {
+    font-size: clamp(2.2rem, 9vw, 3.3rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+  
+  .btn-primary img,
+  .btn-secondary img {
+    height: 48px;
+    width: auto;
+  }
+  
+  .btn-primary .cta-text,
+  .btn-secondary .cta-text {
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .hero-bottom-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    justify-content: center;
+  }
+
+  .bottom-stat {
+    min-width: 100px;
+  }
+
+  .stat-title {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+  }
+
+  .stat-value {
+    font-size: 0.6rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .slider-dots {
+    bottom: 20px;
+  }
+  
+  .dot {
+    width: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    margin-top: 10rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 7rem;
+  }
+  
+  .social-links {
+    margin-top: 5rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .btn-primary img,
+  .btn-secondary img {
+    height: 50px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn-primary .cta-text,
+  .btn-secondary .cta-text {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .hero-bottom-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .bottom-stat {
+    min-width: 80px;
+    padding: 0.5rem;
+  }
+
+  .stat-title {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+
+  .stat-value {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    padding-top: 70px;
+  }
+  
+  .hero-container {
+    padding: 1rem;
+  }
+  
+  .hero-content {
+    margin-top: 12rem;
+  }
+  
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+  
+  .hero-title .line1,
+  .hero-title .line2 {
+    font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    margin-bottom: 2rem;
+    margin-top: 8rem;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  
+  .social-links {
+    margin-top: 6rem;
+  }
+  
+  .btn-primary img,
+  .btn-secondary img {
+    height: 48px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-primary .cta-text,
+  .btn-secondary .cta-text {
+    font-size: 0.8rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+  }
+  
+  .social-link img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hero-bottom-stats {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bottom-stat {
+    min-width: 70px;
+    padding: 0.25rem;
+  }
+  
+  .stat-title {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .stat-value {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .slider-dots {
+    bottom: 15px;
+  }
+  
+  .dot {
+    width: 25px;
+    height: 2px;
+  }
+}

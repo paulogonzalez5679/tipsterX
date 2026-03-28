@@ -1,0 +1,75 @@
+<section class="hero" id="inicio">
+  <!-- Slides con imágenes de fondo -->
+  @for (slide of slides; track $index) {
+    <div 
+      class="slide" 
+      [class.active]="currentSlide === $index"
+      [style.backgroundImage]="'url(' + slide.image + ')'"
+    >
+    </div>
+  }
+
+  <!-- Contenido estático (primer slide) -->
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="line1">{{ slides[0].title1 }}</span>
+        <span class="line2">{{ slides[0].title2 }}</span>
+      </h1>
+
+      <h2 class="hero-subtitle">{{ slides[0].subtitle }}</h2>
+      
+      <p class="hero-description">{{ slides[0].description }}</p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary">
+          <img src="images\buttons\btnPronosG.svg" alt="">
+          <span class="cta-text">PRONÓSTICOS GRATIS</span>
+        </button>
+        <button class="btn-secondary">
+          <img src="images\buttons\btnUnirPro.svg" alt="">
+          <span class="cta-text">UNIRME A <strong>PRO</strong></span>
+        </button>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">
+          <img src="images/icons/facebook.svg" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <img src="images/icons/instagram.svg" alt="Instagram" width="24" height="24">
+        </a>
+        <a href="#" class="social-link" aria-label="TikTok">
+          <img src="images/icons/tiktok.svg" alt="TikTok" width="24" height="24">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Stats -->
+  <div class="hero-bottom-stats">
+    <div class="bottom-stat">
+      <span class="stat-title">BUILT</span>
+      <span class="stat-value">TO WIN</span>
+    </div>
+    <div class="bottom-stat">
+      <span class="stat-title">DATA</span>
+      <span class="stat-value">DECISION · RESULT</span>
+    </div>
+    <div class="bottom-stat">
+      <span class="stat-title">HIGH</span>
+      <span class="stat-value">PERFORMANCE</span>
+    </div>
+  </div>
+
+  <!-- Slider Indicators -->
+  <div class="slider-dots">
+    @for (slide of slides; track $index) {
+      <span 
+        class="dot" 
+        [class.active]="currentSlide === $index"
+        (click)="goToSlide($index)">
+      </span>
+    }
+  </div>
+</section>

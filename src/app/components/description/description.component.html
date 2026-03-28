@@ -1,0 +1,71 @@
+<section class="description" id="servicios">
+
+  <!-- Banner de Resultados -->
+  <div class="results-banner">
+    <p>MEJORES RESULTADOS — 2026 · MEJOR METODOLOGÍA · ANÁLISIS AVANZADO · HORA DEL JUEGO</p>
+  </div>
+
+  <!-- Sección de Móviles con Resultados - Carrusel 3D -->
+  <div class="results-section" id="analisis-deportivo">
+    <div class="carousel-3d-container">
+      <button class="carousel-btn prev" (click)="prevSlide()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      
+      <div class="carousel-3d-wrapper">
+        <div class="carousel-3d-track">
+          @for (image of images; track image.id; let i = $index) {
+            <div 
+              class="carousel-3d-slide"
+              [class.active]="i === activeIndex"
+              [class.prev]="i === getPrevIndex()"
+              [class.next]="i === getNextIndex()"
+              [class.prev-2]="i === getPrevIndex(2)"
+              [class.next-2]="i === getNextIndex(2)"
+              [class.hidden]="!isVisible(i)">
+              <div class="slide-card">
+                <img [src]="image.src" [alt]="image.alt" class="slide-image">
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      
+      <button class="carousel-btn next" (click)="nextSlide()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      @for (image of images; track image.id; let i = $index) {
+        <button 
+          class="indicator" 
+          [class.active]="i === activeIndex"
+          (click)="goToSlide(i)">
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Segunda banda de ligas -->
+  <div class="leagues-banner">
+    <p>FÚTBOL LATINOAMERICANO · LIGAS NACIONALES · SELECCIONES · ELIMINATORIAS · COPAS CONTINENTALES · LIBERTADORES · SUDAMERICANA · CHAMPIONS · EUROPA LEAGUE · TORNEOS INTERNACIONALES · ESCENA GLOBAL · TOP INTERNATIONAL LEAGUES · UEFA · CONMEBOL · CONCACAF · FIFA · UFC · MUNDIAL 2026</p>
+  </div>
+
+  <!-- Botones CTA -->
+  <div class="cta-buttons">
+    <button class="btn-secondary-outline">
+      <img src="/images/buttons/btnPronosticoG.svg" alt="">
+      <span>PRONÓSTICOS GRATIS</span>
+    </button>
+    <button class="btn-primary-red">
+      <img src="/images/buttons/btnUnirPro.svg" alt="">
+      <span>UNIRME A PRO</span>
+    </button>
+  </div>
+</section>

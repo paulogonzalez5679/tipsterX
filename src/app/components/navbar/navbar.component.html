@@ -1,0 +1,35 @@
+<nav class="navbar" [class.menu-open]="isMenuOpen()">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo">
+        <img src="/images/logos/Recurso 6.svg" alt="TipsterX Logo">
+      </div>
+      <span class="logo-divider">|</span>
+      <a routerLink="/" fragment="analisis-deportivo" class="logo-tagline" (click)="closeMenu()">ANÁLISIS DEPORTIVO</a>
+    </div>
+    
+    <!-- Hamburger Button -->
+    <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    
+    <div class="navbar-right" [class.active]="isMenuOpen()">
+      <ul class="nav-links">
+        <li class="mobile-only"><a routerLink="/" fragment="analisis-deportivo" (click)="closeMenu()">ANÁLISIS DEPORTIVO</a></li>
+        <li><a routerLink="/" fragment="inicio" (click)="closeMenu()">HOME</a></li>
+        <li><a routerLink="/" fragment="contacto" (click)="closeMenu()">CONTACTO</a></li>
+      </ul>
+      <button class="nav-cta">
+        <img src="images\buttons\btnPronostico.svg" alt="">
+        <span class="cta-text">PRONÓSTICOS</span>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile overlay -->
+  @if (isMenuOpen()) {
+    <div class="menu-overlay" (click)="closeMenu()"></div>
+  }
+</nav>
