@@ -22,13 +22,7 @@ export class HeroComponent implements OnDestroy {
   private isBrowser: boolean;
 
   slides: Slide[] = [
-    {
-      title1: 'LISTOS PARA',
-      title2: 'GANAR',
-      subtitle: 'ANÁLISIS DEPORTIVO AVANZADO',
-      description: 'Análisis deportivo basado en datos, contexto y lectura real del juego. Decisiones informadas para quienes entienden que ganar no es suerte, es método.',
-      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=900&fit=crop'
-    },
+
     {
       title1: 'HIGH',
       title2: 'PERFORMANCE',
@@ -36,13 +30,7 @@ export class HeroComponent implements OnDestroy {
       description: 'Más de 87% de efectividad en nuestros pronósticos. Únete a miles de miembros que ya están ganando con nosotros.',
       image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&h=900&fit=crop'
     },
-    {
-      title1: 'BUILT TO',
-      title2: 'WIN',
-      subtitle: 'DATA · DECISION · RESULT',
-      description: 'Tecnología de punta y análisis estadístico avanzado para maximizar tus ganancias. El método que los profesionales usan.',
-      image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=900&fit=crop'
-    }
+
   ];
 
   constructor(
