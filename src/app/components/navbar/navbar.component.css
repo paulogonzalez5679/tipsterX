@@ -28,9 +28,11 @@
   display: flex;
   align-items: center;
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: 1px;
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Tactic Sans', 'Aspekta', sans-serif;
+  text-transform: uppercase;
 }
 
 .logo img {
@@ -56,9 +58,10 @@
   color: #fff;
   text-decoration: none;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: 1px;
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Tactic Sans', 'Aspekta', sans-serif;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -89,9 +92,11 @@
   color: #fff;
   text-decoration: none;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: 1px;
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Tactic Sans', 'Aspekta', sans-serif;
+  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
@@ -120,12 +125,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Tactic Sans', 'Aspekta', sans-serif;
   font-weight: 700;
+  font-style: italic;
   font-size: 0.85rem;
   letter-spacing: 0.8px;
   white-space: nowrap;
   pointer-events: none;
+  text-transform: uppercase;
 }
 
 .nav-cta:hover {

@@ -28,12 +28,13 @@
 
 .plans-title {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
   color: #fff;
   margin: 0 0 1.5rem 0;
   letter-spacing: 2px;
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Tactic Sans', 'Aspekta', sans-serif;
+  text-transform: uppercase;
 }
 
 .title-x {

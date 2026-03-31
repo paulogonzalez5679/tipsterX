@@ -10,6 +10,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url('./assets/fonts/TACTIC SANS EXT/tacticsansexd-bld.otf') format('opentype');
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box;
 }
